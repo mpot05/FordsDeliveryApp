@@ -15,10 +15,12 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
+            VStack {
                 List {
                     NavigationLink("Add order", destination: AddOrderView())
                     NavigationLink("List orders", destination: ListOfOrdersView())
                 }
+            }
         }
     }
 }
