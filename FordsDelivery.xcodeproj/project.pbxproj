@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2185BFB22C00B47C00C750F2 /* OrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185BFB12C00B47C00C750F2 /* OrderInfo.swift */; };
+		2185BFB42C00B84400C750F2 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185BFB32C00B84400C750F2 /* OrderViewModel.swift */; };
+		2185BFB62C00BFEC00C750F2 /* ListOfOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185BFB52C00BFEC00C750F2 /* ListOfOrdersView.swift */; };
+		2185BFB82C00C4CD00C750F2 /* IndividualOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185BFB72C00C4CD00C750F2 /* IndividualOrderView.swift */; };
+		2185BFBA2C00DC4B00C750F2 /* AddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2185BFB92C00DC4B00C750F2 /* AddOrderView.swift */; };
 		38F320DE2BFFA8CD004AFA12 /* FordsDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F320DD2BFFA8CD004AFA12 /* FordsDeliveryApp.swift */; };
 		38F320E02BFFA8CD004AFA12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F320DF2BFFA8CD004AFA12 /* ContentView.swift */; };
 		38F320E22BFFA8CE004AFA12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F320E12BFFA8CE004AFA12 /* Assets.xcassets */; };
@@ -42,6 +47,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2185BFB12C00B47C00C750F2 /* OrderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfo.swift; sourceTree = "<group>"; };
+		2185BFB32C00B84400C750F2 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		2185BFB52C00BFEC00C750F2 /* ListOfOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfOrdersView.swift; sourceTree = "<group>"; };
+		2185BFB72C00C4CD00C750F2 /* IndividualOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualOrderView.swift; sourceTree = "<group>"; };
+		2185BFB92C00DC4B00C750F2 /* AddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderView.swift; sourceTree = "<group>"; };
 		38F320DA2BFFA8CD004AFA12 /* FordsDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FordsDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F320DD2BFFA8CD004AFA12 /* FordsDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FordsDeliveryApp.swift; sourceTree = "<group>"; };
 		38F320DF2BFFA8CD004AFA12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +119,11 @@
 			children = (
 				38F320DD2BFFA8CD004AFA12 /* FordsDeliveryApp.swift */,
 				38F320DF2BFFA8CD004AFA12 /* ContentView.swift */,
+				2185BFB92C00DC4B00C750F2 /* AddOrderView.swift */,
+				2185BFB52C00BFEC00C750F2 /* ListOfOrdersView.swift */,
+				2185BFB72C00C4CD00C750F2 /* IndividualOrderView.swift */,
+				2185BFB12C00B47C00C750F2 /* OrderInfo.swift */,
+				2185BFB32C00B84400C750F2 /* OrderViewModel.swift */,
 				38F320EB2BFFA8E0004AFA12 /* GoogleService-Info.plist */,
 				38F320E12BFFA8CE004AFA12 /* Assets.xcassets */,
 				38F320E32BFFA8CE004AFA12 /* Preview Content */,
@@ -229,6 +244,11 @@
 			files = (
 				38F320E02BFFA8CD004AFA12 /* ContentView.swift in Sources */,
 				38F320DE2BFFA8CD004AFA12 /* FordsDeliveryApp.swift in Sources */,
+				2185BFB62C00BFEC00C750F2 /* ListOfOrdersView.swift in Sources */,
+				2185BFB22C00B47C00C750F2 /* OrderInfo.swift in Sources */,
+				2185BFB82C00C4CD00C750F2 /* IndividualOrderView.swift in Sources */,
+				2185BFB42C00B84400C750F2 /* OrderViewModel.swift in Sources */,
+				2185BFBA2C00DC4B00C750F2 /* AddOrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,7 +38,7 @@ struct FordsDeliveryApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
-            }
+            }.environmentObject(OrderViewModel())
         }
     }
 }

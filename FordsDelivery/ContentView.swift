@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var itemName: String = ""
+    @State var itemQuantity: Int = 0
+    @State var id: String = ""
+    @EnvironmentObject var orderVM: OrderViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+                List {
+                    NavigationLink("Add order", destination: AddOrderView())
+                    NavigationLink("List orders", destination: ListOfOrdersView())
+                }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(OrderViewModel())
 }
