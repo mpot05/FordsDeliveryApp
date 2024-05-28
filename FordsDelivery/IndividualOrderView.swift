@@ -17,7 +17,7 @@ struct IndividualOrderView: View {
             Spacer()
             Text("Item Name: \(order.itemName)")
                 .font(.largeTitle)
-            Text("Number of this item: \(order.itemQuantity)")
+            Text("Number of this item: \(order.quantity ?? 1)")
                 .font(.largeTitle)
             Text("ID String: \(order.id)")
             Spacer()
@@ -32,6 +32,6 @@ struct IndividualOrderView: View {
 }
 
 #Preview {
-    IndividualOrderView(order: OrderModel(itemName: "Test", itemQuantity: 50, id: UUID().uuidString))
+    IndividualOrderView(order: OrderModel(itemName: "Test", quantity: 50, id: UUID().uuidString))
         .environmentObject(OrderViewModel())
 }
