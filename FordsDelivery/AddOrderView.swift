@@ -28,8 +28,8 @@ struct AddOrderView: View {
             
             Button(action: {
                 if (itemName != "" && itemQuantity >= 1) {
-                    let order = OrderInfo(itemName: itemName, itemQuantity: itemQuantity)
-                    orderVM.saveOrderDataToDataBase(orderInfo: order)
+                    let order = OrderModel(itemName: itemName, itemQuantity: itemQuantity)
+                    orderVM.saveOrderDataToDataBase(orderModel: order)
                     itemName = ""
                     itemQuantity = 0
                     dismiss()

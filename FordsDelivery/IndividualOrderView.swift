@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IndividualOrderView: View {
     @EnvironmentObject var orderVM: OrderViewModel
-    @StateObject var order: OrderInfo
+    @StateObject var order: OrderModel
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -22,7 +22,7 @@ struct IndividualOrderView: View {
             Text("ID String: \(order.id)")
             Spacer()
             Button(action: {
-                orderVM.deleteOrder(orderInfo: order)
+                orderVM.deleteOrder(orderModel: order)
                 dismiss()
             }, label: {
                 Text("Delete this order")
@@ -32,6 +32,6 @@ struct IndividualOrderView: View {
 }
 
 #Preview {
-    IndividualOrderView(order: OrderInfo(itemName: "Test", itemQuantity: 50, id: UUID().uuidString))
+    IndividualOrderView(order: OrderModel(itemName: "Test", itemQuantity: 50, id: UUID().uuidString))
         .environmentObject(OrderViewModel())
 }

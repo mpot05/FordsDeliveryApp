@@ -11,13 +11,13 @@ import FirebaseCore
 
 class OrderViewModel: ObservableObject {
     
-    @Published var Orders: [OrderInfo] = []
+    @Published var Orders: [OrderModel] = []
     
     @Published var retrieved: Bool = false
     
     let db = Firestore.firestore()
     
-    func getItemWithId(id: String) -> OrderInfo? {
+    func getItemWithId(id: String) -> OrderModel? {
         for i in Orders {
             if i.id == id {
                 return i
@@ -26,8 +26,8 @@ class OrderViewModel: ObservableObject {
         return nil
     }
     
-    func saveOrderDataToDataBase(orderInfo: OrderInfo) {
-        db.collection("orders").document(orderInfo.id).setData(orderInfo.toDictionaryValue()) {
+    func saveOrderDataToDataBase(orderModel: OrderModel) {
+        db.collection("orders").document(orderModel.id).setData(orderModel.toDictionaryValue()) {
             error in
             if let err = error {
                 print(err)
@@ -47,7 +47,7 @@ class OrderViewModel: ObservableObject {
             if let ss = snapshot {
                 Orders.removeAll()
                 for i in ss.documents {
-                    Orders.append(OrderInfo(data: i.data()))
+                    Orders.append(OrderModel(data: i.data()))
                 }
                 retrieved = true
             } else {
@@ -68,7 +68,7 @@ class OrderViewModel: ObservableObject {
             if let ss = snapshot {
                 Orders.removeAll()
                 for i in ss.documents {
-                    Orders.append(OrderInfo(data: i.data()))
+                    Orders.append(OrderModel(data: i.data()))
                 }
                 retrieved = true
             } else {
@@ -78,8 +78,8 @@ class OrderViewModel: ObservableObject {
         }
     }
     
-    func deleteOrder(orderInfo: OrderInfo) {
-        db.collection("orders").document(orderInfo.id).delete() { err in
+    func deleteOrder(orderModel: OrderModel) {
+        db.collection("orders").document(orderModel.id).delete() { err in
             if let err = err {
                 print("Error removing document: \(err)")
             } else {

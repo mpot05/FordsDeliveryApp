@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseCore
 
-class OrderInfo: ObservableObject, Identifiable {
+class OrderModel: ObservableObject, Identifiable {
     
     @Published var itemName: String
     @Published var itemQuantity: Int
