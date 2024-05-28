@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddOrderView: View {
     @State var itemName: String = ""
-    @State var quantity: Int = 0
+    @State var quantity: Int?
     @State var id: String = ""
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var orderVM: OrderViewModel
@@ -27,11 +27,9 @@ struct AddOrderView: View {
             TextField("Quantity", value: $quantity, formatter: NumberFormatter()).textFieldStyle(.roundedBorder).padding(.horizontal)
             
             Button(action: {
-                if (itemName != "" && quantity >= 1) {
-                    let order = OrderModel(itemName: itemName, quantity: quantity)
+                if (itemName != "") {
+                    let order = OrderModel(itemName: itemName, quantity: quantity ?? 1)
                     orderVM.saveOrderDataToDataBase(orderModel: order)
-                    itemName = ""
-                    quantity = 0
                     dismiss()
                 }
             }, label: {
