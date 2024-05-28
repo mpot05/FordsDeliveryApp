@@ -23,7 +23,7 @@ struct ListOfOrdersView: View {
                     }
                 }
             }.onAppear {
-                orderVM.retrieveOrderData()
+                orderVM.addOrderObserverToFirebase()
             }
         }
     }

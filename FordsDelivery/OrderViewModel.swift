@@ -59,6 +59,25 @@ class OrderViewModel: ObservableObject {
         })
     }
     
+    func addOrderObserverToFirebase() {
+        db.collection("orders").addSnapshotListener { snapshot, error in
+            if let err = error {
+                print(err)
+                return
+            }
+            if let ss = snapshot {
+                self.Orders.removeAll()
+                for i in ss.documents {
+                    self.Orders.append(OrderInfo(data: i.data()))
+                }
+                self.retrieved = true
+            } else {
+                print("No snapshot found")
+                return
+            }
+        }
+    }
+    
     func deleteOrder(orderInfo: OrderInfo) {
         db.collection("orders").document(orderInfo.id).delete() { err in
             if let err = err {
