@@ -88,14 +88,4 @@ class OrderViewModel: ObservableObject {
         }
     }
     
-//    func deleteShopItem(shopInfo: ShopInfo) {
-//        db.collection("shopItems").document(shopInfo.id).delete() { err in
-//            if let err = err {
-//                print("Error removing document: \(err)")
-//            } else {
-//                print("Document successfully removed!")
-//            }
-//        }
-//    }
-    
 }
