@@ -28,7 +28,7 @@ struct AddOrderView: View {
             
             Button(action: {
                 if (itemName != "" && itemQuantity >= 1) {
-                    let order = OrderInfo(itemName: itemName, itemQuantity: itemQuantity, id: UUID().uuidString)
+                    let order = OrderInfo(itemName: itemName, itemQuantity: itemQuantity)
                     orderVM.saveOrderDataToDataBase(orderInfo: order)
                     itemName = ""
                     itemQuantity = 0

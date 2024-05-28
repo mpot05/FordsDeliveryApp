@@ -15,7 +15,7 @@ class OrderInfo: ObservableObject, Identifiable {
     @Published var itemQuantity: Int
     @Published var id: String
     
-    init(itemName: String, itemQuantity: Int, id: String) {
+    init(itemName: String, itemQuantity: Int, id: String = UUID().uuidString) {
         self.itemName = itemName
         self.itemQuantity = itemQuantity
         self.id = id
