@@ -19,7 +19,7 @@ struct IndividualOrderView: View {
                 .font(.largeTitle)
             Text("Number of this item: \(order.quantity ?? 1)")
                 .font(.largeTitle)
-            Text("Created: \(order.created.dateValue())")
+            Text("Created: \(order.created.dateValue().formatted())")
             Text("ID String: \(order.id)")
             Spacer()
             Button(action: {
