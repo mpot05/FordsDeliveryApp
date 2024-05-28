@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var itemName: String = ""
-    @State var itemQuantity: Int = 0
-    @State var id: String = ""
     @EnvironmentObject var orderVM: OrderViewModel
     
     var body: some View {
