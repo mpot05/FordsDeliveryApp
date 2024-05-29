@@ -33,7 +33,7 @@ class OrderModel: ObservableObject, Identifiable {
     func toDictionaryValue() -> [String : Any] {
         return [
             "itemName" : self.itemName,
-            "itemQuantity" : self.quantity ?? 1,
+            "quantity" : self.quantity ?? 1,
             "created" : Timestamp(date: created.dateValue()),
             "id" : self.id
         ]
